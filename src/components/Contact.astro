@@ -145,7 +145,7 @@
         class="bg-[#181818] border border-[#222] rounded-xl p-10 flex flex-col gap-5"
       >
         {
-          [
+          ([
             {
               id: "name",
               label: "Name",
@@ -164,7 +164,8 @@
               type: "text",
               placeholder: "What do you want to talk about?",
             },
-          ].map((f) => (
+          ] as const
+        ).map((f) => (
             <div class="flex flex-col gap-2">
               <label
                 for={f.id}
@@ -222,15 +223,16 @@
 <script>
   document.getElementById("contactForm")?.addEventListener("submit", (e) => {
     e.preventDefault();
-    const btn = e.target.querySelector(".submit-btn");
-    const span = btn.querySelector("span");
+    const target = e.target as HTMLFormElement;
+    const btn = target.querySelector(".submit-btn") as HTMLButtonElement;
+    const span = btn.querySelector("span") as HTMLSpanElement;
     const orig = span.textContent;
     span.textContent = "Message sent!";
     btn.style.background = "#10B981";
     setTimeout(() => {
       span.textContent = orig;
       btn.style.background = "";
-      e.target.reset();
+      target.reset();
     }, 3000);
   });
 </script>
