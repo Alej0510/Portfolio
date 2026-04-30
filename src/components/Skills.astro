@@ -2,64 +2,64 @@
 const skills = [
   {
     name: "HTML",
-    icon: "🌐",
+    icon: "html5.svg",
     desc: "Semantics, accessibility, and structure.",
   },
   {
     name: "CSS",
-    icon: "🎨",
+    icon: "css.svg",
     desc: "Modern layouts, animations, responsive design.",
   },
   {
     name: "JavaScript",
-    icon: "⚡",
+    icon: "javascript.svg",
     desc: "ES6+, DOM, async/await.",
   },
-    {
+  {
     name: "TypeScript",
-    icon: "🔷",
+    icon: "typescript.svg",
     desc: "Type-safe JavaScript.",
   },
   {
     name: "React",
-    icon: "⚛️",
+    icon: "react_light.svg",
     desc: "Hooks, components, state management.",
   },
   {
     name: "Next.js",
-    icon: "▲",
+    icon: "nextjs_icon_dark.svg",
     desc: "SSR, SSG, routing, API routes.",
   },
   {
     name: "Tailwind CSS",
-    icon: "🌬️",
+    icon: "tailwindcss.svg",
     desc: "Utility-first, responsive, dark mode.",
   },
   {
     name: "PostgreSQL",
-    icon: "🐘",
+    icon: "postgresql.svg",
     desc: "Queries, relations, modeling.",
   },
   {
     name: "Astro",
-    icon: "🚀",
+    icon: "astro-icon-dark.svg",
     desc: "Build fast websites with components.",
   },
   {
     name: "Supabase",
-    icon: "🟢",
+    icon: "supabase.svg",
     desc: "PostgreSQL, Authentication, Storage.",
   },
   {
     name: "C#",
-    icon: "#",
+    icon: "csharp.svg",
     desc: "Basic OOP knowledge.",
   },
   {
     name: "Git & GitHub",
-    icon: "🔧",
+    icon: "git.svg",
     desc: "Version control and collaborative workflow.",
-  }
+  },
 ];
 ---
 
@@ -67,63 +67,69 @@ const skills = [
   id="skills"
   class="relative py-32 px-16 bg-[#0A0A0A] overflow-hidden max-md:py-24 max-md:px-6"
 >
-
-  <div class="absolute top-1/4 -left-20 w-96 h-96 bg-teal/10 rounded-full blur-[120px] animate-pulse-slow pointer-events-none"></div>
-  <div class="absolute bottom-1/4 -right-20 w-80 h-80 bg-teal/5 rounded-full blur-[100px] animate-float pointer-events-none"></div>
-
-
   <div
-    class="absolute bottom-[-4rem] right-[-2rem] font-display font-extrabold text-[12rem] leading-none tracking-tighter text-white/[0.02] select-none pointer-events-none uppercase"
+    class="absolute top-1/4 -left-20 w-96 h-96 bg-teal/10 rounded-full blur-[120px] animate-pulse-slow pointer-events-none"
   >
-    Tech
+  </div>
+  <div
+    class="absolute bottom-1/4 -right-20 w-80 h-80 bg-teal/5 rounded-full blur-[100px] animate-float pointer-events-none"
+  >
   </div>
 
   <div class="max-w-6xl mx-auto relative z-10">
     <div class="flex items-center gap-4 mb-6">
       <div class="w-8 h-[1px] bg-teal opacity-50"></div>
-      <span class="font-display text-[0.7rem] font-bold text-teal tracking-[0.2em] uppercase"
+      <span
+        class="font-display text-[0.7rem] font-bold text-teal tracking-[0.2em] uppercase"
         >Expertise</span
       >
     </div>
 
-    <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+    <div
+      class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16"
+    >
       <div>
         <h2
           class="font-display font-extrabold text-[2.5rem] leading-none tracking-tight mb-4"
         >
-          Stack & <span class="text-teal drop-shadow-[0_0_15px_rgba(0,188,212,0.3)]">Technologies</span>
+          Stack & <span
+            class="text-teal drop-shadow-[0_0_15px_rgba(0,188,212,0.3)]"
+            >Technologies</span
+          >
         </h2>
         <div class="h-1 w-20 bg-teal rounded-full"></div>
       </div>
       <p class="text-[0.9rem] text-white/50 max-w-sm leading-relaxed">
-        I specialize in building performant web applications using modern tools and industry best practices.
+        I specialize in building performant web applications using modern tools
+        and industry best practices.
       </p>
     </div>
 
     <div
-      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
+      class="flex flex-wrap items-center justify-center gap-x-12 gap-y-12 max-w-6xl mx-auto"
     >
       {
         skills.map((s, i) => (
           <div
-            class="group relative bg-[#121212] border border-white/5 rounded-xl p-8 transition-all duration-500 hover:border-teal/30 hover:-translate-y-1 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)] overflow-hidden"
-            style={`animation: fadeUp 0.6s ${i * 0.1}s ease both;`}
+            class="group flex items-center gap-4 transition-all duration-500 cursor-default"
+            style={`animation: fadeUp 0.6s ${i * 0.05}s ease both;`}
           >
-            <!-- Hover Glow -->
-            <div class="absolute -inset-px bg-gradient-to-br from-teal/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            
-            <div class="relative z-10">
-              <div class="flex items-start justify-between mb-6">
-                <div class="w-12 h-12 flex items-center justify-center bg-white/5 rounded-2xl group-hover:bg-teal/10 group-hover:scale-110 transition-all duration-500 text-2xl">
-                  {s.icon}
-                </div>
-              </div>
+            <div class="relative flex items-center justify-center w-10 h-10">
+              <div class="absolute inset-0 bg-teal/10 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <img
+                src={`/skills/${s.icon}`}
+                alt={s.name}
+                class="w-8 h-8 object-contain grayscale opacity-20 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 relative z-10"
+              />
+            </div>
 
-              <h3 class="font-display font-bold text-lg mb-2 group-hover:text-white transition-colors duration-300">{s.name}</h3>
-              <p class="text-[0.8rem] text-white/40 leading-relaxed mb-6 group-hover:text-white/60 transition-colors duration-300">
-                {s.desc}
-              </p>
-
+            <div class="flex flex-col -space-y-1">
+              <span class="font-display text-[0.6rem] font-bold text-teal/40 group-hover:text-teal transition-colors duration-300">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <span class="font-display font-black text-2xl md:text-3xl tracking-tighter uppercase text-white/[0.07] group-hover:text-white transition-all duration-500">
+                {s.name}
+              </span>
             </div>
           </div>
         ))
@@ -162,12 +168,24 @@ const skills = [
   }
 
   @keyframes float {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(20px, -20px); }
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(20px, -20px);
+    }
   }
 
   @keyframes pulse {
-    0%, 100% { opacity: 0.1; transform: scale(1); }
-    50% { opacity: 0.2; transform: scale(1.1); }
+    0%,
+    100% {
+      opacity: 0.1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.2;
+      transform: scale(1.1);
+    }
   }
 </style>
