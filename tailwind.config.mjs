@@ -17,7 +17,7 @@ export default {
         black: '#0A0A0A',
       },
       fontFamily: {
-        display: ['Syne', 'sans-serif'],
+        display: ['Outfit', 'sans-serif'],
         body: ['DM Sans', 'sans-serif'],
       },
       fontSize: {

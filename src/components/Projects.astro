@@ -1,34 +1,34 @@
 ---
 const projects = [
-  { title: 'Portfolio Personal',    desc: 'Este mismo sitio — diseñado y construido con Astro y Tailwind CSS.',                                        tags: ['Astro','Tailwind','JS'],   color: '#00BCD4', emoji: '🚀', status: 'Live' },
-  { title: 'UI Component Library',  desc: 'Colección de componentes reutilizables en React con Tailwind CSS, listos para producción.',                  tags: ['React','Tailwind','TS'],   color: '#7C3AED', emoji: '🧩', status: 'En progreso' },
-  { title: 'Dashboard App',         desc: 'Panel de administración con autenticación, gráficas y datos usando Next.js y PostgreSQL.',                   tags: ['Next.js','PostgreSQL'],    color: '#059669', emoji: '📊', status: 'En progreso' },
-  { title: 'Clone UI Project',      desc: 'Recreación pixel-perfect de interfaces populares para practicar CSS avanzado y responsive design.',          tags: ['HTML','CSS','JS'],         color: '#D97706', emoji: '✏️', status: 'Completado' },
+  { title: 'Personal Portfolio',    desc: 'This very site — designed and built with Astro and Tailwind CSS.',                                        tags: ['Astro','Tailwind','JS'],   color: '#00BCD4', emoji: '🚀', status: 'Live' },
+  { title: 'UI Component Library',  desc: 'Collection of reusable React components with Tailwind CSS, ready for production.',                  tags: ['React','Tailwind','TS'],   color: '#7C3AED', emoji: '🧩', status: 'In progress' },
+  { title: 'Dashboard App',         desc: 'Admin dashboard with authentication, charts, and data using Next.js and PostgreSQL.',                   tags: ['Next.js','PostgreSQL'],    color: '#059669', emoji: '📊', status: 'In progress' },
+  { title: 'Clone UI Project',      desc: 'Pixel-perfect recreation of popular interfaces to practice advanced CSS and responsive design.',          tags: ['HTML','CSS','JS'],         color: '#D97706', emoji: '✏️', status: 'Completed' },
 ];
 
 const statusStyle: Record<string, string> = {
   'Live':        'bg-teal/10 text-teal border border-teal/30',
-  'En progreso': 'bg-amber-500/10 text-amber-400 border border-amber-500/30',
-  'Completado':  'bg-emerald-500/10 text-emerald-400 border border-emerald-500/30',
+  'In progress': 'bg-amber-500/10 text-amber-400 border border-amber-500/30',
+  'Completed':  'bg-emerald-500/10 text-emerald-400 border border-emerald-500/30',
 };
 ---
 
-<section id="proyectos" class="py-32 px-16 max-md:py-20 max-md:px-6">
+<section id="projects" class="py-32 px-16 max-md:py-20 max-md:px-6">
   <div class="max-w-6xl mx-auto">
     <div class="flex items-center gap-4 mb-5">
       <span class="font-display text-[0.72rem] font-bold text-teal opacity-60">03</span>
-      <span class="text-[0.68rem] tracking-[0.2em] uppercase text-[#888]">Proyectos</span>
+      <span class="text-[0.68rem] tracking-widest uppercase text-[#888]">Projects</span>
     </div>
 
     <h2 class="font-display font-extrabold text-[2rem] leading-tight tracking-tight mb-4">
-      Lo que he <span class="text-teal">construido</span>
+      What I've <span class="text-teal">built</span>
     </h2>
 
     <div class="flex items-center gap-2 text-[0.78rem] text-[#888] bg-[#181818] border border-[#222] border-l-2 border-l-teal px-4 py-3 rounded mb-12">
       <svg class="text-teal shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
       </svg>
-      Soy un desarrollador en formación. Estos proyectos representan mi aprendizaje. ¡Contáctame si quieres colaborar!
+      I'm a developer in training. These projects represent my learning process. Contact me if you want to collaborate!
     </div>
 
     <div class="grid grid-cols-2 gap-6 mb-12 max-md:grid-cols-1">
@@ -58,7 +58,7 @@ const statusStyle: Record<string, string> = {
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
           <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
         </svg>
-        Ver todos mis repos en GitHub
+        View all my repos on GitHub
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M7 17L17 7M17 7H7M17 7v10"/>
         </svg>
