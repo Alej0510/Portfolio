@@ -1,0 +1,59 @@
+---
+---
+
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-16 py-6 bg-black/85 backdrop-blur-lg border-b border-teal/10 transition-all duration-300 max-md:px-6 max-md:py-5">
+  <a href="/" class="font-display font-extrabold text-2xl tracking-tight text-[#F5F5F5] hover:text-teal transition-colors">
+    AC<span class="text-teal">.</span>
+  </a>
+
+  <ul class="flex list-none gap-10 max-md:hidden">
+    {['sobre-mi','habilidades','proyectos','contacto'].map(s => (
+      <li>
+        <a href={`#${s}`} class="text-xs font-normal tracking-widest uppercase text-[#888] hover:text-[#F5F5F5] transition-colors relative group">
+          {s.replace('-',' ')}
+          <span class="absolute -bottom-0.5 left-0 w-0 h-px bg-teal transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </li>
+    ))}
+  </ul>
+
+  <a href="mailto:alejandrocm1406@gmail.com" class="text-xs font-medium tracking-widest uppercase px-5 py-2.5 border border-teal text-teal rounded-sm hover:bg-teal hover:text-black transition-all max-md:hidden">
+    Hablemos
+  </a>
+
+  <button id="hamburger" aria-label="Menú" class="hidden flex-col gap-1.5 bg-transparent border-none cursor-pointer p-1 max-md:flex">
+    <span class="block w-6 h-0.5 bg-[#F5F5F5] transition-all"></span>
+    <span class="block w-6 h-0.5 bg-[#F5F5F5] transition-all"></span>
+    <span class="block w-6 h-0.5 bg-[#F5F5F5] transition-all"></span>
+  </button>
+</nav>
+
+<div id="mobileMenu" class="hidden fixed inset-0 bg-black z-40 flex-col items-center justify-center">
+  <ul class="list-none text-center">
+    {['sobre-mi','habilidades','proyectos','contacto'].map(s => (
+      <li class="my-6">
+        <a href={`#${s}`} class="mobile-link font-display text-5xl font-bold text-[#F5F5F5] hover:text-teal transition-colors capitalize">
+          {s.replace('-',' ')}
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  hamburger?.addEventListener('click', () => {
+    const isOpen = mobileMenu?.classList.contains('flex');
+    mobileMenu?.classList.toggle('hidden', isOpen);
+    mobileMenu?.classList.toggle('flex', !isOpen);
+  });
+
+  document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu?.classList.add('hidden');
+      mobileMenu?.classList.remove('flex');
+    });
+  });
+</script>

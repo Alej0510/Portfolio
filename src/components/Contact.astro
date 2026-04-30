@@ -1,0 +1,103 @@
+---
+---
+
+<section id="contacto" class="relative py-32 px-16 bg-[#111] overflow-hidden max-md:py-20 max-md:px-6">
+  <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] pointer-events-none" style="background: radial-gradient(ellipse at center, rgba(0,188,212,0.07) 0%, transparent 70%);"></div>
+
+  <div class="max-w-6xl mx-auto relative z-10">
+    <div class="flex items-center gap-4 mb-5">
+      <span class="font-display text-[0.72rem] font-bold text-teal opacity-60">04</span>
+      <span class="text-[0.68rem] tracking-[0.2em] uppercase text-[#888]">Contacto</span>
+    </div>
+
+    <div class="grid grid-cols-2 gap-24 items-start mt-2 max-lg:grid-cols-1 max-lg:gap-12">
+
+      <!-- Left -->
+      <div>
+        <h2 class="font-display font-extrabold text-[2rem] leading-tight tracking-tight mb-5">
+          ¿Tienes un proyecto<br/>en mente?
+        </h2>
+        <p class="text-[0.92rem] text-[#CCC] leading-relaxed mb-10 max-w-sm">
+          Estoy abierto a oportunidades de freelance, colaboraciones y posiciones junior. Escríbeme y conversamos.
+        </p>
+
+        <div class="flex flex-col gap-3">
+          {[
+            { href: 'mailto:alejandrocm1406@gmail.com', icon: 'mail',  label: 'Email',     val: 'alejandrocm1406@gmail.com' },
+            { href: 'tel:+573207710042',                icon: 'phone', label: 'Teléfono',  val: '+57 320 7710042' },
+            { href: 'https://github.com/alejandrocm1406', icon: 'github', label: 'GitHub', val: 'github.com/alejandrocm1406' },
+          ].map(item => (
+            <a href={item.href} target={item.href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer"
+              class="flex items-center gap-4 p-4 bg-[#181818] border border-[#222] rounded-lg hover:border-teal hover:translate-x-1 transition-all group">
+              <div class="w-9 h-9 bg-[#222] rounded-md flex items-center justify-center text-teal shrink-0">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill={item.icon === 'github' ? 'currentColor' : 'none'} stroke={item.icon !== 'github' ? 'currentColor' : undefined} stroke-width="2">
+                  {item.icon === 'mail'   && <><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></>}
+                  {item.icon === 'phone'  && <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.63 19.79 19.79 0 01.22 4.04 2 2 0 012.2 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.41a16 16 0 006.68 6.68l.56-.56a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>}
+                  {item.icon === 'github' && <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>}
+                </svg>
+              </div>
+              <div class="flex flex-col flex-1">
+                <span class="text-[0.65rem] tracking-[0.12em] uppercase text-[#888] mb-0.5">{item.label}</span>
+                <span class="text-[0.82rem] text-[#F5F5F5]">{item.val}</span>
+              </div>
+              <svg class="text-[#888] group-hover:text-teal transition-colors shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17L17 7M17 7H7M17 7v10"/>
+              </svg>
+            </a>
+          ))}
+
+          <div class="flex items-center gap-4 p-4 bg-[#181818] border border-[#222] rounded-lg">
+            <div class="w-9 h-9 bg-[#222] rounded-md flex items-center justify-center text-teal shrink-0">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-[0.65rem] tracking-[0.12em] uppercase text-[#888] mb-0.5">Ubicación</span>
+              <span class="text-[0.82rem] text-[#F5F5F5]">Medellín, Colombia 🇨🇴</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <form id="contactForm" class="bg-[#181818] border border-[#222] rounded-xl p-10 flex flex-col gap-5">
+        {[
+          { id: 'name',    label: 'Nombre',  type: 'text',  placeholder: 'Tu nombre' },
+          { id: 'email',   label: 'Email',   type: 'email', placeholder: 'tu@email.com' },
+          { id: 'subject', label: 'Asunto',  type: 'text',  placeholder: '¿De qué quieres hablar?' },
+        ].map(f => (
+          <div class="flex flex-col gap-2">
+            <label for={f.id} class="text-[0.68rem] tracking-[0.12em] uppercase text-[#888]">{f.label}</label>
+            <input id={f.id} name={f.id} type={f.type} placeholder={f.placeholder} autocomplete="off"
+              class="bg-[#222] border border-white/5 rounded-md px-4 py-3 text-[#F5F5F5] font-body text-[0.88rem] outline-none placeholder-[#555] focus:border-teal transition-colors" />
+          </div>
+        ))}
+        <div class="flex flex-col gap-2">
+          <label for="message" class="text-[0.68rem] tracking-[0.12em] uppercase text-[#888]">Mensaje</label>
+          <textarea id="message" name="message" rows={5} placeholder="Cuéntame sobre tu proyecto..."
+            class="bg-[#222] border border-white/5 rounded-md px-4 py-3 text-[#F5F5F5] font-body text-[0.88rem] outline-none placeholder-[#555] focus:border-teal transition-colors resize-y"></textarea>
+        </div>
+        <button type="submit"
+          class="submit-btn flex items-center justify-center gap-3 py-3.5 px-8 bg-teal text-black font-body text-[0.82rem] font-medium tracking-[0.08em] uppercase rounded-md hover:bg-teal-dark hover:-translate-y-0.5 hover:shadow-lg hover:shadow-teal/20 transition-all mt-2">
+          <span>Enviar mensaje</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.getElementById('contactForm')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = e.target.querySelector('.submit-btn');
+    const span = btn.querySelector('span');
+    const orig = span.textContent;
+    span.textContent = '¡Mensaje enviado!';
+    btn.style.background = '#10B981';
+    setTimeout(() => { span.textContent = orig; btn.style.background = ''; e.target.reset(); }, 3000);
+  });
+</script>

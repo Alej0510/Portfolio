@@ -1,0 +1,61 @@
+---
+const skills = [
+  { name: 'HTML',        level: 90, icon: '🌐', desc: 'Semántica, accesibilidad y estructura.' },
+  { name: 'CSS',         level: 85, icon: '🎨', desc: 'Layouts modernos, animaciones, responsive.' },
+  { name: 'JavaScript',  level: 80, icon: '⚡', desc: 'ES6+, DOM, async/await.' },
+  { name: 'React',       level: 78, icon: '⚛️', desc: 'Hooks, componentes, state management.' },
+  { name: 'Next.js',     level: 72, icon: '▲',  desc: 'SSR, SSG, routing, API routes.' },
+  { name: 'Tailwind CSS',level: 82, icon: '🌬️', desc: 'Utility-first, responsive, dark mode.' },
+  { name: 'PostgreSQL',  level: 60, icon: '🐘', desc: 'Consultas, relaciones, modelado.' },
+  { name: 'Git & GitHub',level: 75, icon: '🔧', desc: 'Versiones y flujo colaborativo.' },
+];
+---
+
+<section id="habilidades" class="relative py-32 px-16 bg-[#111] overflow-hidden max-md:py-20 max-md:px-6">
+  <!-- Watermark -->
+  <div class="absolute bottom-[-2rem] right-[-1rem] font-display font-extrabold text-[10rem] leading-none tracking-tighter text-teal/[0.03] select-none pointer-events-none">SKILLS</div>
+
+  <div class="max-w-6xl mx-auto relative z-10">
+    <div class="flex items-center gap-4 mb-5">
+      <span class="font-display text-[0.72rem] font-bold text-teal opacity-60">02</span>
+      <span class="text-[0.68rem] tracking-[0.2em] uppercase text-[#888]">Habilidades</span>
+    </div>
+
+    <div class="flex items-end justify-between gap-8 mb-14 flex-wrap">
+      <h2 class="font-display font-extrabold text-[2rem] leading-tight tracking-tight">
+        Stack & <span class="text-teal">Tecnologías</span>
+      </h2>
+      <p class="text-[0.85rem] text-[#888] max-w-xs max-lg:text-left">
+        Las herramientas con las que construyo interfaces modernas y escalables.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-4 gap-px bg-[#222] border border-[#222] rounded-lg overflow-hidden max-xl:grid-cols-2 max-sm:grid-cols-1">
+      {skills.map((s, i) => (
+        <div
+          class="bg-[#181818] p-7 flex flex-col gap-3 hover:bg-[#222] hover:-translate-y-0.5 transition-all duration-200 cursor-default"
+          style={`animation: fadeUp 0.6s ${i * 0.07}s ease both;`}
+        >
+          <div class="flex items-center gap-3">
+            <span class="text-[1.35rem] leading-none">{s.icon}</span>
+            <div class="flex items-baseline justify-between flex-1 gap-2">
+              <h3 class="font-display font-bold text-[0.9rem]">{s.name}</h3>
+              <span class="text-[0.67rem] text-teal font-medium">{s.level}%</span>
+            </div>
+          </div>
+          <p class="text-[0.72rem] text-[#888] leading-relaxed">{s.desc}</p>
+          <div class="h-[2px] bg-[#222] rounded-full overflow-hidden mt-auto">
+            <div class="h-full rounded-full origin-left animate-bar-grow" style={`width:${s.level}%; background:linear-gradient(90deg,#0097A7,#00BCD4);`}></div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+</style>
