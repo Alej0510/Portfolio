@@ -9,6 +9,7 @@ export const POST: APIRoute = async ({ request }) => {
     const name = data.get("name") as string;
     const email = data.get("email") as string;
     const message = data.get("message") as string;
+    const subject = data.get("subject") as string;
 
     //validation
     if (!name || !email || !message) {
@@ -19,8 +20,8 @@ export const POST: APIRoute = async ({ request }) => {
     const emailData = await resend.emails.send({
       from: "Portfolio Contact <onboarding@resend.dev>",
       to: ["alejandrocm1406@gmail.com"],
-      reply_to: email as string,
-      subject: "New message from portfolio",
+      replyTo: email as string,
+      subject: subject || "New message from portfolio",
       html: 
       `<div style="font-family: sans-serif; line-height: 1.5;">
           <h2>New Message from ${name}</h2>

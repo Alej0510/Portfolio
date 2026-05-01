@@ -1,5 +1,5 @@
 ---
-
+import Swal from "sweetalert2";
 ---
 
 <section
@@ -202,7 +202,7 @@
         </div>
         <button
           type="submit"
-          class="submit-btn flex items-center justify-center gap-3 py-3.5 px-8 bg-teal text-black font-body text-[0.82rem] font-medium tracking-[0.08em] uppercase rounded-md hover:bg-teal-dark hover:-translate-y-0.5 hover:shadow-lg hover:shadow-teal/20 transition-all mt-2"
+          class="submit-btn flex items-center justify-center gap-3 py-3.5 px-8 bg-teal text-black font-body text-[0.82rem] font-medium tracking-[0.08em] uppercase rounded-md hover:bg-teal-dark hover:shadow-sm hover:shadow-teal/20 transition-all mt-2"
         >
           <span>Send message</span>
           <svg
@@ -223,6 +223,8 @@
 </section>
 
 <script>
+  import Swal from "sweetalert2";
+
   const contactForm = document.getElementById("contactForm") as HTMLFormElement;
   const btn = contactForm.querySelector(".submit-btn") as HTMLButtonElement;
   const btnText = btn.querySelector("span") as HTMLSpanElement;
@@ -232,7 +234,7 @@
 
     if (btnText) btnText.innerText = "Sending...";
     btn.disabled = true;
-    btn.style.opacity = "0.7";
+    btn.classList.add("opacity-50", "cursor-not-allowed");
 
     const formData = new FormData(contactForm);
 
@@ -242,31 +244,40 @@
         body: formData,
       });
 
-      const result = await response.json();
-
       if (response.ok) {
-        alert("Message sent successfully!");
+        Swal.fire({
+          icon: "success",
+          title: "Success!",
+          text: "Message sent successfully!",
+          background: "#111",
+          color: "#fff",
+          confirmButtonColor: "#00BCD4",
+        });
+        contactForm.reset();
       } else {
-        alert("Failed to send message.");
+        Swal.fire({
+          icon: "error",
+          title: "Error!",
+          text: "Failed to send message. Please try again.",
+          background: "#111",
+          color: "#fff",
+          confirmButtonColor: "#00BCD4",
+        });
       }
     } catch (error) {
       console.log("Form error: ", error);
-      // alert("Error sending message. Please try again later.");
+      Swal.fire({
+        icon: "error",
+        title: "Error!",
+        text: "Error sending message. Please try again.",
+        background: "#111",
+        color: "#fff",
+        confirmButtonColor: "#00BCD4",
+      });
     } finally {
       if (btnText) btnText.innerText = "Send message";
       btn.disabled = false;
-      btn.style.opacity = "1";
-      contactForm.reset();
+      btn.classList.remove("opacity-50", "cursor-not-allowed");
     }
-
-    /*
-      btnText.textContent = "Send message";
-    btn.style.background = "#10B981";
-    setTimeout(() => {
-      btnText.textContent = "Send message";
-      btn.style.background = "";
-      contactForm.reset();
-    }, 3000);
-    */
   });
 </script>
