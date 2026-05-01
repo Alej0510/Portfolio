@@ -6,5 +6,6 @@ import vercel from "@astrojs/vercel";
 export default defineConfig({
   site: "https://alejandrocardona.dev",
   output: "server",
-  integrations: [tailwind(), vercel()],
+  integrations: [tailwind()],
+  adapter: vercel(),
 });
