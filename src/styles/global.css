@@ -40,9 +40,19 @@
 }
 
 @layer utilities {
-  .text-gray-custom { color: #888888; }
-  .text-light-gray  { color: #CCCCCC; }
-  .bg-dark-2        { background-color: #181818; }
-  .bg-dark-3        { background-color: #222222; }
-  .border-dark-3    { border-color: #222222; }
+  .text-gray-custom {
+    color: #888888;
+  }
+  .text-light-gray {
+    color: #cccccc;
+  }
+  .bg-dark-2 {
+    background-color: #181818;
+  }
+  .bg-dark-3 {
+    background-color: #222222;
+  }
+  .border-dark-3 {
+    border-color: #222222;
+  }
 }

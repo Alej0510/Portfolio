@@ -1,7 +1,10 @@
-import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
+import { defineConfig } from "astro/config";
+import tailwind from "@astrojs/tailwind";
+
+import vercel from "@astrojs/vercel";
 
 export default defineConfig({
-  site: 'https://alejandrocardona.dev',
-  integrations: [tailwind()],
+  site: "https://alejandrocardona.dev",
+  output: "server",
+  integrations: [tailwind(), vercel()],
 });

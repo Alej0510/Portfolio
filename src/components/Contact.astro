@@ -33,7 +33,8 @@
           Have a project<br />in mind?
         </h2>
         <p class="text-[0.92rem] text-[#CCC] leading-relaxed mb-10 max-w-sm">
-          I'm open to freelance opportunities, collaborations, and junior positions. Write to me and let's talk.
+          I'm open to freelance opportunities, collaborations, and junior
+          positions. Write to me and let's talk.
         </p>
 
         <div class="flex flex-col gap-3">
@@ -145,27 +146,28 @@
         class="bg-[#181818] border border-[#222] rounded-xl p-10 flex flex-col gap-5"
       >
         {
-          ([
-            {
-              id: "name",
-              label: "Name",
-              type: "text",
-              placeholder: "Your name",
-            },
-            {
-              id: "email",
-              label: "Email",
-              type: "email",
-              placeholder: "you@email.com",
-            },
-            {
-              id: "subject",
-              label: "Subject",
-              type: "text",
-              placeholder: "What do you want to talk about?",
-            },
-          ] as const
-        ).map((f) => (
+          (
+            [
+              {
+                id: "name",
+                label: "Name",
+                type: "text",
+                placeholder: "Your name",
+              },
+              {
+                id: "email",
+                label: "Email",
+                type: "email",
+                placeholder: "you@email.com",
+              },
+              {
+                id: "subject",
+                label: "Subject",
+                type: "text",
+                placeholder: "What do you want to talk about?",
+              },
+            ] as const
+          ).map((f) => (
             <div class="flex flex-col gap-2">
               <label
                 for={f.id}
@@ -221,18 +223,50 @@
 </section>
 
 <script>
-  document.getElementById("contactForm")?.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const target = e.target as HTMLFormElement;
-    const btn = target.querySelector(".submit-btn") as HTMLButtonElement;
-    const span = btn.querySelector("span") as HTMLSpanElement;
-    const orig = span.textContent;
-    span.textContent = "Message sent!";
+  const contactForm = document.getElementById("contactForm") as HTMLFormElement;
+  const btn = contactForm.querySelector(".submit-btn") as HTMLButtonElement;
+  const btnText = btn.querySelector("span") as HTMLSpanElement;
+
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault(); //stops the page from reloading
+
+    if (btnText) btnText.innerText = "Sending...";
+    btn.disabled = true;
+    btn.style.opacity = "0.7";
+
+    const formData = new FormData(contactForm);
+
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        body: formData,
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        alert("Message sent successfully!");
+      } else {
+        alert("Failed to send message.");
+      }
+    } catch (error) {
+      console.log("Form error: ", error);
+      // alert("Error sending message. Please try again later.");
+    } finally {
+      if (btnText) btnText.innerText = "Send message";
+      btn.disabled = false;
+      btn.style.opacity = "1";
+      contactForm.reset();
+    }
+
+    /*
+      btnText.textContent = "Send message";
     btn.style.background = "#10B981";
     setTimeout(() => {
-      span.textContent = orig;
+      btnText.textContent = "Send message";
       btn.style.background = "";
-      target.reset();
+      contactForm.reset();
     }, 3000);
+    */
   });
 </script>
