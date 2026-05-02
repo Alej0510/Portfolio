@@ -28,7 +28,7 @@ pnpm build
 ### Contact
 
 Alejandro Cardona - alejandrocm1406@gmail.com 
-Project Link:[https://github.com/Alej0510/Portfolio] (https://github.com/Alej0510/Portfolio) 
+Project Link: https://github.com/Alej0510/Portfolio 
 
 ### Acknowledgments
 
