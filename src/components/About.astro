@@ -1,87 +1,156 @@
 ---
+
 ---
 
-<section id="sobre-mi" class="relative py-32 px-16 max-md:py-20 max-md:px-6">
-  <div class="max-w-6xl mx-auto grid grid-cols-2 gap-24 items-center max-lg:grid-cols-1 max-lg:gap-12">
-
+<section id="about-me" class="relative py-32 px-16 max-md:py-20 max-md:px-6">
+  <div
+    class="max-w-6xl mx-auto grid grid-cols-2 gap-24 items-center max-lg:grid-cols-1 max-lg:gap-12"
+  >
     <!-- Left -->
     <div>
       <div class="flex items-center gap-4 mb-8">
-        <span class="font-display text-[0.72rem] font-bold text-teal opacity-60">01</span>
-        <span class="text-[0.68rem] tracking-widest uppercase text-[#888]">About me</span>
+        <span class="font-display text-[0.72rem] font-bold text-teal opacity-60"
+          >01</span
+        >
+        <span class="text-[0.68rem] tracking-widest uppercase text-[#888]"
+          >About me</span
+        >
       </div>
 
-      <h2 class="font-display font-extrabold text-[2rem] leading-tight tracking-tight mb-7">
-        Building the web<br/>
+      <h2
+        class="font-display font-extrabold text-[2rem] leading-tight tracking-tight mb-7"
+      >
+        Building the web<br />
         <span class="text-teal">of the future</span>
       </h2>
 
       <p class="text-[0.92rem] text-[#CCC] leading-[1.85] mb-4">
-        I am Alejandro Cardona, a <strong class="text-[#F5F5F5] font-medium">Software Engineering</strong> student at the Institución Universitaria Pascual Bravo, Medellín. I am passionate about turning ideas and designs into modern, fast, and accessible web experiences.
+        I am Alejandro Cardona, a <strong class="text-[#F5F5F5] font-medium"
+          >Software Engineering</strong
+        > student at the Institución Universitaria Pascual Bravo, Medellín. I am passionate
+        about turning ideas and designs into modern, fast, and accessible web experiences.
       </p>
 
       <p class="text-[0.92rem] text-[#CCC] leading-[1.85] mb-10">
-        I work confidently with <strong class="text-[#F5F5F5] font-medium">HTML, CSS, JavaScript, React, and Next.js</strong>, and I strive to write clean and maintainable code. Always learning.
+        I work confidently with <strong class="text-[#F5F5F5] font-medium"
+          >HTML, CSS, JavaScript, React, and Next.js</strong
+        >, and I strive to write clean and maintainable code. Always learning.
       </p>
 
       <!-- Languages -->
       <div class="flex flex-col gap-4">
-        {[
-          { name: 'Spanish', pct: 100, level: 'Native' },
-          { name: 'English',  pct: 70,  level: 'B2' },
-        ].map(l => (
-          <div class="grid items-center gap-4" style="grid-template-columns: 80px 1fr 40px">
-            <span class="text-[0.78rem] text-[#CCC]">{l.name}</span>
-            <div class="h-[3px] bg-[#222] rounded-full overflow-hidden">
-              <div class="h-full rounded-full origin-left animate-bar-grow" style={`width:${l.pct}%; background: linear-gradient(90deg,#0097A7,#00BCD4);`}></div>
+        {
+          [
+            { name: "Spanish", pct: 100, level: "Native" },
+            { name: "English", pct: 70, level: "B2" },
+          ].map((l) => (
+            <div
+              class="grid items-center gap-4"
+              style="grid-template-columns: 80px 1fr 40px"
+            >
+              <span class="text-[0.78rem] text-[#CCC]">{l.name}</span>
+              <div class="h-[3px] bg-[#222] rounded-full overflow-hidden">
+                <div
+                  class="h-full rounded-full origin-left animate-bar-grow"
+                  style={`width:${l.pct}%; background: linear-gradient(90deg,#0097A7,#00BCD4);`}
+                />
+              </div>
+              <span class="text-[0.68rem] text-teal font-medium text-right">
+                {l.level}
+              </span>
             </div>
-            <span class="text-[0.68rem] text-teal font-medium text-right">{l.level}</span>
-          </div>
-        ))}
+          ))
+        }
       </div>
     </div>
 
     <!-- Right: Profile Card -->
-    <div class="bg-[#181818] border border-[#222] rounded-xl p-10 flex flex-col gap-6 hover:border-teal/30 transition-colors">
+    <div
+      class="bg-[#181818] border border-[#222] rounded-xl p-12 flex flex-col gap-6 hover:border-teal/30 transition-colors"
+    >
       <!-- Avatar -->
       <div class="relative w-20">
-        <div class="w-20 h-20 rounded-full flex items-center justify-center font-display font-extrabold text-2xl text-black" style="background: linear-gradient(135deg,#0097A7,#00BCD4)">
+        <div
+          class="w-20 h-20 rounded-full flex items-center justify-center font-display font-extrabold text-2xl text-black"
+          style="background: linear-gradient(135deg,#0097A7,#00BCD4)"
+        >
           AC
         </div>
-        <div class="absolute -inset-1 rounded-full border border-teal opacity-40" style="animation: ringPulse 3s ease-in-out infinite;"></div>
+        <div
+          class="absolute -inset-1 rounded-full border border-teal opacity-40"
+          style="animation: ringPulse 3s ease-in-out infinite;"
+        >
+        </div>
       </div>
 
       <div>
         <h3 class="font-display font-bold text-lg mb-1">Alejandro Cardona</h3>
-        <p class="text-[0.75rem] tracking-[0.1em] uppercase text-teal">Frontend Developer</p>
+        <p class="text-[0.75rem] tracking-[0.1em] uppercase text-teal">
+          Frontend Developer
+        </p>
       </div>
 
       <!-- Details -->
       <div class="flex flex-col gap-3">
-        {[
-          { icon: 'phone', text: '+57 320 7710042' },
-          { icon: 'mail',  text: 'alejandrocm1406@gmail.com' },
-          { icon: 'pin',   text: 'Medellín, Colombia' },
-        ].map(d => (
-          <div class="flex items-center gap-3 text-[0.8rem] text-[#CCC]">
-            <svg class="text-teal shrink-0" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              {d.icon === 'phone' && <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.63 19.79 19.79 0 01.22 4.04 2 2 0 012.2 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.41a16 16 0 006.68 6.68l.56-.56a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>}
-              {d.icon === 'mail'  && <><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></>}
-              {d.icon === 'pin'   && <><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></>}
-            </svg>
-            {d.text}
-          </div>
-        ))}
+        {
+          [
+            { icon: "phone", text: "+57 320 7710042" },
+            { icon: "mail", text: "alejandrocm1406@gmail.com" },
+            { icon: "pin", text: "Medellín, Colombia" },
+          ].map((d) => (
+            <div class="flex items-center gap-3 text-[0.8rem] text-[#CCC]">
+              <svg
+                class="text-teal shrink-0"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                {d.icon === "phone" && (
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.63 19.79 19.79 0 01.22 4.04 2 2 0 012.2 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.41a16 16 0 006.68 6.68l.56-.56a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                )}
+                {d.icon === "mail" && (
+                  <>
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </>
+                )}
+                {d.icon === "pin" && (
+                  <>
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </>
+                )}
+              </svg>
+              {d.text}
+            </div>
+          ))
+        }
       </div>
 
       <!-- Education -->
-      <div class="flex items-start gap-3 p-4 bg-[#222] rounded-md border-l-2 border-teal">
-        <svg class="text-teal mt-0.5 shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
+      <div
+        class="flex items-start gap-3 p-4 bg-[#222] rounded-md border-l-2 border-teal"
+      >
+        <svg
+          class="text-teal mt-0.5 shrink-0"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path
+            d="M6 12v5c3 3 9 3 12 0v-5"></path>
         </svg>
         <div>
           <p class="text-[0.83rem] font-medium mb-0.5">Software Engineering</p>
-          <p class="text-[0.72rem] text-[#888]">I.U. Pascual Bravo · 2024 – Present</p>
+          <p class="text-[0.72rem] text-[#888]">
+            I.U. Pascual Bravo · 2024 – Present
+          </p>
         </div>
       </div>
     </div>
@@ -90,7 +159,14 @@
 
 <style>
   @keyframes ringPulse {
-    0%, 100% { transform: scale(1); opacity: 0.4; }
-    50% { transform: scale(1.08); opacity: 0.1; }
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 0.4;
+    }
+    50% {
+      transform: scale(1.08);
+      opacity: 0.1;
+    }
   }
 </style>
