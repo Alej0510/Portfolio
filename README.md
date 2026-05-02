@@ -2,6 +2,8 @@
 
 <a align="center" href="https://alejc.vercel.app/" target="_blank">View Demo</a>
 
+![portfolio mockup](design/mockup.png)
+
 ### Built With
 
 - [![Astro][astro]][astro-url]
