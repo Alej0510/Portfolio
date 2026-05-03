@@ -2,7 +2,7 @@
 
 <a align="center" href="https://alejc.vercel.app/" target="_blank">View Demo</a>
 
-![portfolio mockup](design/Mockup.png)
+[![Portfolio Astro][product-screenshot]](design/Mockup.jpg)
 
 ### Built With
 
