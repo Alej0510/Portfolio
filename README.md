@@ -1,5 +1,7 @@
 <h1 align="center">Astro Portfolio</h1>
 
+![Portfolio mockup](design/Mockup.jpg)
+
 <a align="center" href="https://alejc.vercel.app/" target="_blank">View Demo</a>
 
 ### Built With
