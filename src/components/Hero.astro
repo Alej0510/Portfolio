@@ -38,7 +38,6 @@
     >
       Alejandro<br />
       <span class="text-teal">Cardona</span>
-      Monsalve
     </h1>
 
     <p
@@ -60,13 +59,22 @@
         target="_blank"
       >
         <!-- Animated Gradient Background -->
-        <div class="absolute inset-0 bg-gradient-to-r from-teal-dark via-teal to-teal-dark bg-[length:200%_auto] animate-gradient-x"></div>
-        
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-teal-dark via-teal to-teal-dark bg-[length:200%_auto] animate-gradient-x"
+        >
+        </div>
+
         <!-- Hover Glow Overlay -->
-        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[inset_0_0_20px_rgba(255,255,255,0.2)]"></div>
+        <div
+          class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shadow-[inset_0_0_20px_rgba(255,255,255,0.2)]"
+        >
+        </div>
 
         <!-- Shimmer Effect -->
-        <div class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000 group-hover:translate-x-full"></div>
+        <div
+          class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-1000 group-hover:translate-x-full"
+        >
+        </div>
 
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +88,8 @@
           stroke-linejoin="round"
           class="relative z-10 transition-transform duration-500 group-hover:rotate-[12deg] group-hover:scale-110"
         >
-          <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
+          <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"
+          ></path>
           <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
           <path d="M10 9H8"></path>
           <path d="M16 13H8"></path>
@@ -95,18 +104,20 @@
       >
         <span class="relative z-10 group-hover:text-teal transition-colors">
           Contact
-          <span class="absolute -bottom-1 left-0 w-0 h-[1px] bg-teal transition-all duration-300 group-hover:w-full"></span>
+          <span
+            class="absolute -bottom-1 left-0 w-0 h-[1px] bg-teal transition-all duration-300 group-hover:w-full"
+          ></span>
         </span>
-        <svg 
-          xmlns="http://www.w3.org/2000/svg" 
-          width="16" 
-          height="16" 
-          viewBox="0 0 24 24" 
-          fill="none" 
-          stroke="currentColor" 
-          stroke-width="2.5" 
-          stroke-linecap="round" 
-          stroke-linejoin="round" 
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
           class="relative z-10 transition-transform duration-300 group-hover:translate-x-1.5 group-hover:text-teal"
         >
           <path d="M5 12h14"></path>
@@ -209,9 +220,15 @@
     }
   }
   @keyframes gradient-x {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
   .animate-gradient-x {
     animation: gradient-x 3s linear infinite;
