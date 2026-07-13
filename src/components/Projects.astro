@@ -1,41 +1,47 @@
 ---
+import ProjectMockup from "./ProjectMockup.astro";
+
 const projects = [
   {
     title: "Raíces",
+    slug: "raices",
     desc: "Website for a cafe located in Marinilla, Antioquia, Colombia.",
     tags: ["Astro", "Tailwind", "TS"],
     color: "#4CAF50",
-    emoji: "🌱",
+    mockup: "/mockups/raices.png",
     status: "In progress",
     liveLink: "https://raices-cafe.vercel.app/",
     repoLink: "https://github.com/Alej0510/Raices",
   },
   {
     title: "To-Do App",
+    slug: "to-do-app",
     desc: "A simple To-Do application for managing daily tasks with dark mode toggle.",
     tags: ["React", "TS"],
     color: "#FF9800",
-    emoji: "✅",
+    mockup: "/mockups/to-do-app.png",
     status: "Completed",
     liveLink: "https://to-do-two-wheat.vercel.app/",
     repoLink: "https://github.com/Alej0510/To-Do",
   },
   {
     title: "5 Direcciones",
+    slug: "5-direcciones",
     desc: "Website for a business consulting firm located in Medellín, Colombia.",
     tags: ["Astro", "Tailwind", "TS"],
     color: "#E91E63",
-    emoji: "🧭",
+    mockup: "/mockups/5-direcciones.png",
     status: "Completed",
     liveLink: "https://5direcciones.vercel.app/",
     repoLink: "https://github.com/Alej0510/5Direcciones",
   },
   {
     title: "Estilo Gráfico",
+    slug: "estilo-grafico",
     desc: "A website for a graphic design company located in Medellín, Colombia.",
     tags: ["Astro", "Tailwind", "TS"],
     color: "#00BCD4",
-    emoji: "🎨",
+    mockup: "/mockups/estilo-grafico.png",
     status: "Completed",
     liveLink: "https://www.estilografico.co/",
     repoLink: "https://github.com/Alej0510/estilo-grafico",
@@ -43,9 +49,9 @@ const projects = [
 ];
 
 const statusStyle: Record<string, string> = {
-  Live: "bg-teal/10 text-teal border border-teal/30",
-  "In progress": "bg-amber-500/10 text-amber-400 border border-amber-500/30",
-  Completed: "bg-emerald-500/10 text-emerald-400 border border-emerald-500/30",
+  Live: "bg-teal/95 text-black border border-teal/30",
+  "In progress": "bg-amber-500/95 text-black border border-amber-500/30",
+  Completed: "bg-emerald-500/95 text-black border border-emerald-500/30",
 };
 ---
 
@@ -95,10 +101,10 @@ const statusStyle: Record<string, string> = {
             class="project-card bg-[#181818] border border-[#222] rounded-xl p-8 flex flex-col gap-4 relative overflow-hidden transition-all duration-300 hover:-translate-y-1"
             style={`--accent:${p.color}; animation: fadeUp 0.6s ${i * 0.1}s ease both;`}
           >
-            <div class="flex items-center justify-between">
-              <span class="text-[2rem] leading-none">{p.emoji}</span>
+            <div class="mockup-wrap relative mb-1">
+              <ProjectMockup src={p.mockup} alt={p.title} />
               <span
-                class={`text-[0.65rem] font-medium tracking-[0.1em] uppercase px-3 py-1 rounded-full ${statusStyle[p.status]}`}
+                class={`absolute top-2.5 right-2.5 z-10 text-[0.65rem] font-medium tracking-[0.1em] uppercase px-3 py-1 rounded-full ${statusStyle[p.status]}`}
               >
                 {p.status}
               </span>
