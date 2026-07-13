@@ -9,24 +9,6 @@
 - [![Astro][astro]][astro-url]
 - [![Tailwind][tailwindcss]][tailwind-url]
 
-### Project Setup
-
-```sh
-pnpm i
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-pnpm dev
-```
-
-### Compile and Minify for Production
-
-```sh
-pnpm build
-```
-
 ### Contact
 
 Alejandro Cardona - 
