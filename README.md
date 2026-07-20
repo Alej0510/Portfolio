@@ -20,7 +20,7 @@ https://github.com/Alej0510/Portfolio
 ### Acknowledgments
 
 - [React](https://react.dev/) - Used for interactive components
-- [Resend](https://resend.com/) - Used for sending emails
+- [Web3forms](https://web3forms.com/) - Used for sending emails
 
 [astro]: https://img.shields.io/badge/Astro-0C1222?style=for-the-badge&logo=astro&logoColor=FDFDFE
 [astro-url]: https://astro.build/
