@@ -6,12 +6,12 @@ const projects = [
     title: "Raíces",
     slug: "raices",
     desc: "Website for a cafe located in Marinilla, Antioquia, Colombia.",
-    tags: ["Astro", "Tailwind", "TS"],
+    tags: ["Astro", "Tailwind"],
     color: "#4CAF50",
     mockup: "/mockups/raices.png",
-    status: "In progress",
+    status: "Completed",
     liveLink: "https://raices-cafe.vercel.app/",
-    repoLink: "https://github.com/Alej0510/Raices",
+    privateSource: true,
   },
   {
     title: "To-Do App",
@@ -28,23 +28,23 @@ const projects = [
     title: "5 Direcciones",
     slug: "5-direcciones",
     desc: "Website for a business consulting firm located in Medellín, Colombia.",
-    tags: ["Astro", "Tailwind", "TS"],
+    tags: ["Astro", "Tailwind"],
     color: "#E91E63",
     mockup: "/mockups/5-direcciones.png",
     status: "Completed",
-    liveLink: "https://5direcciones.vercel.app/",
-    repoLink: "https://github.com/Alej0510/5Direcciones",
+    liveLink: "https://www.5direcciones.com/",
+    privateSource: true,
   },
   {
     title: "Estilo Gráfico",
     slug: "estilo-grafico",
     desc: "A website for a graphic design company located in Medellín, Colombia.",
-    tags: ["Astro", "Tailwind", "TS"],
+    tags: ["Astro", "Tailwind"],
     color: "#00BCD4",
     mockup: "/mockups/estilo-grafico.png",
     status: "Completed",
     liveLink: "https://www.estilografico.co/",
-    repoLink: "https://github.com/Alej0510/estilo-grafico",
+    privateSource: true,
   },
 ];
 
@@ -167,6 +167,27 @@ const statusStyle: Record<string, string> = {
                   </svg>
                   GitHub
                 </a>
+              )}
+              {p.privateSource && (
+                <span
+                  class="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white/[0.03] border border-white/5 rounded-lg text-[0.72rem] font-bold text-white/40 cursor-not-allowed select-none"
+                  title="Source code is private"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                  </svg>
+                  Private Source
+                </span>
               )}
             </div>
           </div>
